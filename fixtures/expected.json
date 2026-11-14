@@ -1,7 +1,103 @@
-{"375":{"alarms":161,"ChNPP":91,"SUNPP":27,"loop_n":27},
- "374":{"alarms":123,"KhNPP":18,"SUNPP":36,"ChNPP":43},
- "373":{"alarms":146,"KhNPP":13,"SUNPP":12,"ChNPP":115},
- "372":{"KhNPP":62,"RNPP":7,"SUNPP":66,"ChNPP":168},
- "371":{"alarms":194,"ChNPP":134,"SUNPP":121,"KhNPP":31,"RNPP":1},
- "370":{"alarms":142,"ChNPP":52,"SUNPP":22,"KhNPP":5,"RNPP":1},
- "369":{"alarms":157,"SUNPP":27,"ChNPP":83,"KhNPP":2}}
+{
+"355": {
+"ChNPP": 10,
+"SUNPP": 11
+},
+"356": {
+"ChNPP": 6,
+"SUNPP": 3
+},
+"357": {
+"SUNPP": 9,
+"loop_n": 21
+},
+"358": {
+"ChNPP": 8,
+"loop_n": 22
+},
+"359": {
+"ChNPP": 6
+},
+"360": {
+"ChNPP": 4,
+"SUNPP": 2
+},
+"361": {
+"ChNPP": 3,
+"SUNPP": 2,
+"loop_n": 24
+},
+"362": {
+"ChNPP": 2,
+"SUNPP": 2,
+"loop_n": 25
+},
+"363": {
+"ChNPP": 4,
+"KhNPP": 1,
+"SUNPP": 6
+},
+"364": {
+"ChNPP": 2,
+"KhNPP": 1,
+"SUNPP": 11
+},
+"365": {
+"ChNPP": 17,
+"KhNPP": 1,
+"RNPP": 3,
+"SUNPP": 28,
+"loop_n": 26
+},
+"366": {
+"ChNPP": 15,
+"KhNPP": 2,
+"RNPP": 3,
+"SUNPP": 13,
+"loop_n": 26
+},
+"369": {
+"ChNPP": 83,
+"KhNPP": 2,
+"SUNPP": 27,
+"alarms": 157
+},
+"370": {
+"ChNPP": 52,
+"KhNPP": 5,
+"RNPP": 1,
+"SUNPP": 22,
+"alarms": 142
+},
+"371": {
+"ChNPP": 134,
+"KhNPP": 31,
+"RNPP": 1,
+"SUNPP": 121,
+"alarms": 194
+},
+"372": {
+"ChNPP": 168,
+"KhNPP": 62,
+"RNPP": 7,
+"SUNPP": 66
+},
+"373": {
+"ChNPP": 115,
+"KhNPP": 13,
+"SUNPP": 12,
+"alarms": 146
+},
+"374": {
+"ChNPP": 43,
+"KhNPP": 18,
+"SUNPP": 36,
+"alarms": 123
+},
+"375": {
+"ChNPP": 91,
+"SUNPP": 27,
+"alarms": 161,
+"loop_n": 27
+}
+}

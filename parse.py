@@ -57,12 +57,29 @@ def skip_number(s, m):
     return False
 
 
+UAV = re.compile(r"unmanned aerial vehicles?|\bUAVs?\b", re.I)
+ANAPHOR = re.compile(r"^\s*(?:Late last week, |Over the past week, |This week, )?(?:the site|it)\b", re.I)
+
+
 def drones(text):
     res, notes = {}, []
-    sents = re.split(r"(?<=[.!?])\s+", text)
+    text = UAV.sub(lambda m: "drones" if m.group(0).lower().endswith("s") else "drone", text)
+    text = re.sub(r"\b(detect(?:ed|ing)|reported) (?:a|an) drone\b", r"\1 one drone", text)
+    raw = re.split(r"(?<=[.!?])\s+", text)
+    # 'The site also detected six drones' / 'It also reported ...': name the site of the previous sentence
+    # (the antecedent may sit up to two site-less sentences back; a ZNPP mention blocks it)
+    prev_site, age = None, 0
+    for i, x in enumerate(raw):
+        sp = site_spans(x)
+        if not sp and prev_site and prev_site != "ZNPP" and age <= 2 and "drone" in x.lower() and ANAPHOR.match(x):
+            raw[i] = "At the " + prev_site + ", " + x
+        if sp:
+            prev_site, age = sp[-1][2], 0
+        else:
+            age += 1
     # weekly 'drones reported near <site>' summaries outrank incident sentences
     # ('the KhNPP reported two further drone attacks', u374 original)
-    sents = [x for x in sents if re.search(r"\bnear\b", x)] + [x for x in sents if not re.search(r"\bnear\b", x)]
+    sents = [x for x in raw if re.search(r"\bnear\b", x)] + [x for x in raw if not re.search(r"\bnear\b", x)]
     for sent in sents:
         if "drone" not in sent.lower() or re.search(r"Spent Fuel", sent, re.I) and not site_spans(sent.split("Spent Fuel")[0]):
             continue
@@ -82,7 +99,9 @@ def drones(text):
                 sent = sent.replace(c, "")
         # drop the spent-fuel clause
         sent = re.sub(r"[^,.;]*Spent Fuel[^,.;]*", "", sent, flags=re.I)
+        sent = re.sub(r"(as well as|and) another\b", r"\1 one", sent)
         spans = site_spans(sent)
+        sent_codes = set()
         for m in re.finditer(NUM, sent, re.I):
             if skip_number(sent, m):
                 continue
@@ -93,12 +112,19 @@ def drones(text):
                 nxt = [x for x in spans if x[0] == m.end() + fwd.end()]
                 code = nxt[0][2] if nxt else None
             if code is None:
-                tied = (re.match(r"\s+drones?", sent[m.end():]) or
+                tied = (re.match(r"\s+(?:more\s+)?drones?", sent[m.end():]) or
                         re.search(r"(?:reported|detected|detecting|than)\s*$", sent[:m.start()]))
                 prev = [x for x in spans if x[1] <= m.start()]
                 if tied and prev:
                     code = prev[-1][2]
+                part = (re.search(r"(?:as well as|and)\s*$", sent[:m.start()]) and
+                        re.match(r"\s+(?:more\b|(?:more\s+)?drones?\b|early|late|earlier|later|on\b|over\b|during|this\b|last\b)", sent[m.end():]))
+                if part and prev and code in (None, prev[-1][2]) and prev[-1][2] in sent_codes:
+                    code = prev[-1][2]
+                    res[code] += v
+                    continue
             if code and code != "ZNPP":
+                sent_codes.add(code)
                 if code in res:
                     notes.append(f"dup {code} {v}")
                     continue
@@ -117,8 +143,14 @@ def alarms(text):
 
 
 def loop_n(text):
-    m = re.search(r"(\d+)(?:st|nd|rd|th) (?:complete |such )?loss of (?:all )?off-site power", text, re.I)
-    return int(m.group(1)) if m else None
+    for rx in [r"(\d+)(?:st|nd|rd|th) (?:complete |such )?loss of (?:all )?off-site power",
+               r"off-site power for the (\d+)(?:st|nd|rd|th) time",
+               r"(\d+)(?:st|nd|rd|th) time[^.]{0,80}?lost (?:all )?off-site power",
+               r"lost (?:access to )?(?:all )?(?:external|off-site) power[^.]{0,120}?total number of such events[^.]{0,40}? to (\d+)\b"]:
+        m = re.search(rx, text, re.I)
+        if m:
+            return int(m.group(1))
+    return None
 
 
 def parse(text):

@@ -20,5 +20,42 @@
   "result_r1": "9 of 12 coded (300,345,350 not yet fetched). Coder and parser agree 9/9, but every value is null on both sides: zero power. The pool 150..368 predates systematic weekly per-site drone totals; 2025 texts give only sporadic incident counts ('five drones were detected 2 km west of the site on 11-12 April', u286).",
   "redraw_rule": "After the full fetch: era start = first update whose text matches a weekly per-site total sentence by grep (r'Drones were (?:also )?reported near' or a number directly before 'near the (KhNPP|RNPP|SUNPP|ChNPP)'), found without the parser. Draw 12 with seed 20261115 from era start..368 (fixtures excluded); if fewer than 12, take all. Same blind coder and prompt. Incident counts become a second, separate column and get their own check.",
   "not_changed": "parser untouched between coding and comparison"
+ },
+ "amendment_2026-11-14b": {
+  "finding": "The preregistered grep matched only u374 (wording varies: 'reported detecting 30 drones', '62 at the Khmelnytskyy NPP'). A broader grep (sentence with drone+week+site+number) hits 23 updates from 249, but 249-351 are episodes ('on two occasions', 'several drones'). Per-site counts in a monitoring area begin at u355 (2026-06-26), found by reading texts, parser not run.",
+  "era_start": 355,
+  "seed": 20261115,
+  "pool": [
+   355,
+   356,
+   357,
+   358,
+   359,
+   360,
+   361,
+   362,
+   363,
+   364,
+   365,
+   366,
+   367,
+   368
+  ],
+  "sample": [
+   355,
+   356,
+   357,
+   358,
+   359,
+   360,
+   361,
+   362,
+   363,
+   364,
+   365,
+   366
+  ],
+  "prompt_note": "r1 prompt was not saved; r2 prompt rebuilt from the r1 output schema and saved in data/blind_prompt_r2.txt (deviation recorded).",
+  "not_changed": "parser untouched; parser not run on r2 sample before coding is saved"
  }
 }

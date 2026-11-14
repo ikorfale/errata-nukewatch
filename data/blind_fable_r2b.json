@@ -1,0 +1,129 @@
+```json
+{
+  "367": {
+    "ChNPP": 48,
+    "SUNPP": 35,
+    "KhNPP": 13,
+    "RNPP": 8,
+    "joint": null,
+    "alarms": null,
+    "znpp_loop": null,
+    "quotes": [
+      "During the past week, the Khmelnytskyy NPP reported 13 drones, and the IAEA team there sheltered twice over the weekend following air raid alarms.",
+      "The Rivne NPP reported 8 drones, The South Ukraine NPP reported 35 drones — some as close as 1.5 kilometres from the site — and the Chornobyl site reported 48 drones in its vicinity.",
+      "In his statement, Director General Grossi noted that since June alone, the ZNPP has suffered 10 losses of offsite power, the latest on 20 August, marking 26 since the conflict began in 2022."
+    ]
+  },
+  "368": {
+    "ChNPP": 71,
+    "SUNPP": 30,
+    "KhNPP": 1,
+    "RNPP": 1,
+    "joint": null,
+    "alarms": null,
+    "znpp_loop": null,
+    "quotes": [
+      "The South Ukraine Nuclear Power Plant (NPP) reported detecting 30 drones in its monitoring area over the past week, while the Chornobyl site reported 71.",
+      "The Rivne NPP and the Khmelnytskyy NPP each reported one drone in their respective monitoring areas."
+    ]
+  },
+  "369": {
+    "ChNPP": 83,
+    "SUNPP": 27,
+    "KhNPP": 2,
+    "RNPP": null,
+    "joint": null,
+    "alarms": 157,
+    "znpp_loop": null,
+    "quotes": [
+      "The South Ukraine Nuclear Power Plant (NPP) reported detecting 27 drones in its monitoring area over the past week, while the Chornobyl site reported 83 and the Khmelnytskyy NPP reported 2.",
+      "High numbers of air raid alerts were also reported across all the sites, with 157 in total over the past week."
+    ]
+  },
+  "370": {
+    "ChNPP": 52,
+    "SUNPP": 22,
+    "KhNPP": 5,
+    "RNPP": 1,
+    "joint": null,
+    "alarms": 142,
+    "znpp_loop": null,
+    "quotes": [
+      "The Chornobyl site reported detecting 52 drones in their monitoring area, and the South Ukraine NPP reported detecting 22 drones.",
+      "The Khmelnytskyy NPP and Rivne NPP also reported five drones and one drone, respectively.",
+      "High numbers of air raid alerts were reported across all sites, with 142 in total over the past week."
+    ]
+  },
+  "371": {
+    "ChNPP": 134,
+    "SUNPP": 121,
+    "KhNPP": 31,
+    "RNPP": 1,
+    "joint": null,
+    "alarms": 194,
+    "znpp_loop": null,
+    "quotes": [
+      "At Ukraine's other nuclear power plant (NPP) sites, increased military activity was reported this week compared with the previous week, during which a total of 80 drones were reported.",
+      "The Chornobyl site reported detecting 134 drones in their monitoring area this week, and on 9 October, IAEA staff at Chornobyl observed a drone descending near the site.",
+      "This week, the South Ukraine NPP reported detecting 121 drones in their monitoring area, while the Khmelnytskyy NPP and Rivne NPP also reported 31 drones and one drone, respectively.",
+      "High numbers of air raid alerts were reported across all sites, with 194 in total over the past week."
+    ]
+  },
+  "372": {
+    "ChNPP": 168,
+    "SUNPP": 66,
+    "KhNPP": 62,
+    "RNPP": 7,
+    "joint": null,
+    "alarms": null,
+    "znpp_loop": null,
+    "quotes": [
+      "Numerous drones were reported throughout the week: 62 at the Khmelnytskyy NPP, 7 at Rivne NPP, and 66 at the South Ukraine NPP.",
+      "The Chornobyl site reported no less than 168 drones, while Energoatom’s Centralized Spent Fuel Storage Facility in the Chornobyl Exclusion Zone reported 9 drones earlier this week, some coming as close as one kilometre from the facility.",
+      "Military activity was also reported near Ukraine’s other nuclear sites this week, with repeated air raid alarms sending IAEA teams at the Khmelnytskyy and Rivne Nuclear Power Plants (NPPs) to shelters on numerous occasions."
+    ]
+  },
+  "373": {
+    "ChNPP": 115,
+    "SUNPP": 12,
+    "KhNPP": 13,
+    "RNPP": null,
+    "joint": null,
+    "alarms": 146,
+    "znpp_loop": null,
+    "quotes": [
+      "In total, 146 air raid alarms were reported, while numerous drones were detected in the vicinity of NPPs, including 13 near the Khmelnytskyy site, 12 near the South Ukraine site and 115 near the Chornobyl site.",
+      "This did not result in a loss of off-site power thanks to a back-up line, which was reconnected during the sixth Agency negotiated ceasefire in June."
+    ]
+  },
+  "374": {
+    "ChNPP": 43,
+    "SUNPP": 36,
+    "KhNPP": 18,
+    "RNPP": null,
+    "joint": null,
+    "alarms": 123,
+    "znpp_loop": null,
+    "quotes": [
+      "Over the past week, a total of 123 air raid alerts were reported across the KhNPP, RNPP, South Ukraine Nuclear Power Plant (SUNPP) and Chornobyl Nuclear Power Plant (ChNPP) sites, with the IAEA team at the RNPP having to shelter.",
+      "Drones were also reported near three of these sites: 18 near the KhNPP, 36 near the SUNPP and 43 near the ChNPP."
+    ]
+  },
+  "375": {
+    "ChNPP": 91,
+    "SUNPP": 27,
+    "KhNPP": null,
+    "RNPP": null,
+    "joint": null,
+    "alarms": 161,
+    "znpp_loop": 27,
+    "quotes": [
+      "In total, 161 air raid alarms were reported, while numerous drones were detected in the vicinity of NPPs, including 91 near the Chornobyl site, one of which was 2 kilometres from the Centralised Spent Fuel Storage Facility in the Chornobyl Exclusion Zone.",
+      "At the South Ukraine site, 27 drones were detected, including one about 350 metres from the site.",
+      "It was the 27th complete loss of off-site power at the ZNPP since the start of the conflict."
+    ]
+  }
+}
+```
+
+Coding notes: Update 367's "marking 26 since the conflict began" refers to a loss on 20 August, before that reporting period, so it is left null. Update 371's "total of 80 drones" describes the previous week, so joint is null there. Update 372 excludes the 9 drones at the Centralized Spent Fuel Storage Facility from the ChNPP count. Update 374 names only three sites with drone numbers, so RNPP is null rather than 0.

@@ -1,0 +1,100 @@
+```json
+{
+  "355": {
+    "ChNPP": 10, "SUNPP": 11, "KhNPP": null, "RNPP": null, "joint": null, "alarms": null, "znpp_loop": null,
+    "quotes": [
+      "The South Ukraine Nuclear Power Plant (NPP) informed the Agency that 11 drones had been detected in its monitoring area on Sunday, some as close as 3.5 kilometres from the site.",
+      "The Chornobyl site reported detecting ten drones in its monitoring area over the past week, as well as three fire spots in the exclusion zone caused by falling drone impacts."
+    ]
+  },
+  "356": {
+    "ChNPP": 6, "SUNPP": 3, "KhNPP": null, "RNPP": null, "joint": null, "alarms": null, "znpp_loop": null,
+    "quotes": [
+      "The site also reported the presence of six drones within their monitoring zone during the past week.",
+      "The South Ukraine NPP also reported detecting three drones in their monitoring area, with the closest being four kilometres from the site."
+    ]
+  },
+  "357": {
+    "ChNPP": null, "SUNPP": 9, "KhNPP": null, "RNPP": null, "joint": null, "alarms": null, "znpp_loop": 21,
+    "quotes": [
+      "The IAEA team at the Khmelnytskyy Nuclear Power Plant (KhNPP) heard military aircraft early on 8 July, and was later informed that drones were detected north of the site.",
+      "The South Ukraine NPP (SUNPP) reported the detection of six drones early on 5 July and three drones on 2 July.",
+      "Separately, the ZNPP on 3 July temporarily lost all off-site power for the 21st time since the start of the conflict."
+    ]
+  },
+  "358": {
+    "ChNPP": 8, "SUNPP": null, "KhNPP": null, "RNPP": null, "joint": null, "alarms": null, "znpp_loop": 22,
+    "quotes": [
+      "On Tuesday afternoon, the ZNPP experienced its 22nd complete loss of off-site power since the start of the conflict.",
+      "At the Chornobyl Nuclear Power Plant site, the IAEA team was informed that a total of eight drone flights were detected within the site’s monitoring zone between 9 and 14 July."
+    ]
+  },
+  "359": {
+    "ChNPP": 6, "SUNPP": null, "KhNPP": null, "RNPP": null, "joint": null, "alarms": null, "znpp_loop": null,
+    "quotes": [
+      "Elsewhere in Ukraine, the IAEA team at the Chornobyl site continued to report air raid alarms on a nearly daily basis. Late last week, the site also detected six drones within its monitoring area."
+    ]
+  },
+  "360": {
+    "ChNPP": 4, "SUNPP": 2, "KhNPP": null, "RNPP": null, "joint": null, "alarms": null, "znpp_loop": null,
+    "quotes": [
+      "At the Chornobyl Nuclear Power Plant, the site reported air raid alarms on a nearly daily basis and detected two drones within its monitoring area late last week, as well as two more earlier this week.",
+      "At the South Ukraine Nuclear Power Plant, the site also continued to report air raid alarms on a nearly daily basis and detected two drones within its monitoring area late last week.",
+      "This morning, one of the operating NPPs reported the disconnection of a power line, coinciding with the detection of a cruise missile and a drone within its monitoring area."
+    ]
+  },
+  "361": {
+    "ChNPP": 3, "SUNPP": 2, "KhNPP": null, "RNPP": null, "joint": null, "alarms": null, "znpp_loop": 24,
+    "quotes": [
+      "The ZNPP has lost access to external power twice in the past week, bringing the total number of such events since the conflict began to 24.",
+      "At the South Ukraine NPP, the site continued to report air raid alarms on a near-daily basis. It also reported detecting one drone within its monitoring area early on Wednesday, as well as another earlier this week.",
+      "At the Chornobyl NPP, the site also continues to report frequent air raid alarms and detected three drones within its monitoring area over the past weekend."
+    ]
+  },
+  "362": {
+    "ChNPP": 2, "SUNPP": 2, "KhNPP": null, "RNPP": null, "joint": null, "alarms": null, "znpp_loop": 25,
+    "quotes": [
+      "It was the 25th complete loss of off-site power (LOOP) at the ZNPP since the start of the conflict, and the 13th since April.",
+      "The South Ukraine Nuclear Power Plant (SUNPP) reported air raid alarms on a near daily basis and detected two drones within its monitoring area late last week.",
+      "The Chornobyl Nuclear Power Plant also reported air raid alarms on a near daily basis, with a noticeable increase over the weekend, when the site reported detecting two drones within its monitoring area."
+    ]
+  },
+  "363": {
+    "ChNPP": 4, "SUNPP": 6, "KhNPP": 1, "RNPP": null, "joint": null, "alarms": null, "znpp_loop": null,
+    "quotes": [
+      "The South Ukraine Nuclear Power Plant reported air raid alarms on a near daily basis and detected one drone within its monitoring area late last week as well as five early this morning.",
+      "The Chornobyl site also continued to report air raid alarms on a near daily basis, with a noticeable increase over the past weekend, and detected four drones within its monitoring area over the past week.",
+      "The Khmelnytskyy Nuclear Power Plant reported detecting one unmanned aerial vehicle within its monitoring zone over the past week, and the team had to shelter on-site today due to an air raid alarm.",
+      "Today, the IAEA team was informed that the 330 kV Ferosplavna-1 power line – the plant’s only remaining off-site power line - was disconnected at 00:44 local time today."
+    ]
+  },
+  "364": {
+    "ChNPP": 2, "SUNPP": 11, "KhNPP": 1, "RNPP": null, "joint": null, "alarms": null, "znpp_loop": null,
+    "quotes": [
+      "The South Ukraine NPP reported air raid alarms on a near daily basis and detected eleven drones within its monitoring area over the past week.",
+      "The Chornobyl site also reported air raid alarms on a near daily basis and detected two drones and one missile within its monitoring area over the past week.",
+      "The Khmelnytskyy NPP (KhNPP) reported detecting one unmanned aerial vehicle within its monitoring zone last Thursday, when the IAEA staff at the site also had to shelter because of an air raid alert.",
+      "The plant lost connection to its only remaining off-site power line, the 330 kilovolt (kV) Ferosplavna-1 line, on 20 August following military activity on the northern side of the Dnipro River."
+    ]
+  },
+  "365": {
+    "ChNPP": 17, "SUNPP": 28, "KhNPP": 1, "RNPP": 3, "joint": null, "alarms": null, "znpp_loop": 26,
+    "quotes": [
+      "It was the 26th time during the conflict that the nuclear power plant has lost off-site power, highlighting the extremely fragile nuclear safety and security situation at the site.",
+      "Over the past week, the South Ukraine Nuclear Power Plant (NPP) reported detecting 28 drones, some as close as three kilometres from the site.",
+      "The Chornobyl facility reported detecting 17 drones while the Rivne NPP reported detecting three drones.",
+      "The Khmelnytskyy NPP also reported detecting a drone six kilometres from the site, and the IAEA team there took shelter on Wednesday afternoon."
+    ]
+  },
+  "366": {
+    "ChNPP": 15, "SUNPP": 13, "KhNPP": 2, "RNPP": 3, "joint": null, "alarms": null, "znpp_loop": 26,
+    "quotes": [
+      "An IAEA field team observed the work, and the line was reconnected on the evening of 7 September, ending the ZNPP’s 26th loss of off-site power during the conflict.",
+      "This week, the South Ukraine NPP detected 13 drones in its monitoring area, while the Chornobyl site detected 15 drones.",
+      "The Rivne and Khmelnytskyy NPPs each reported detecting three and two drones respectively."
+    ]
+  }
+}
+```
+
+Coding notes: Update 357 gives KhNPP drones "north of the site" with no number, so null. Update 360's unnamed "one of the operating NPPs" drone is not attributed to any site or coded as joint. Update 361 gives no "Nth time" phrasing, but states the total reached 24 after the latest losses, so I coded 24. Updates 363 and 364 describe the 20 August loss without an ordinal, so null. Unmanned aerial vehicles at KhNPP were counted as drones. All air-raid alarm mentions are "near daily" only, so alarms is null throughout.

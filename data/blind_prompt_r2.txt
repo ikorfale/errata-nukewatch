@@ -1,0 +1,9 @@
+You are a careful hand-coder. Below are 12 plain-text IAEA "Update N" statements on the situation in Ukraine (files data/txt/u355.txt data/txt/u356.txt data/txt/u357.txt data/txt/u358.txt data/txt/u359.txt data/txt/u360.txt data/txt/u361.txt data/txt/u362.txt data/txt/u363.txt data/txt/u364.txt data/txt/u365.txt data/txt/u366.txt). First line of each file is the publication date.
+
+For EACH update, code only what the text states explicitly:
+- ChNPP, SUNPP, KhNPP, RNPP: the number of drones the text says were detected/reported at or near that site (in its monitoring area) in the reporting period. If several separate counts are given for the same site in this update (e.g. "two late last week, as well as two more earlier this week"), give their sum and list the parts in quotes. Do NOT count drones at the separate Centralized Spent Fuel Storage Facility as ChNPP. Distances ("3 km") and dates are not counts. If the site is not given a number, null. "No drones" stated explicitly = 0.
+- joint: a single drone total given for several sites together, else null.
+- alarms: a stated number of air-raid alarms (sum across sites if given per site), else null. "nearly daily" = null.
+- znpp_loop: if the text says ZNPP lost all off-site power and gives an ordinal ("the 13th time"), that ordinal; else null.
+- quotes: the exact sentences you used.
+Return only JSON: {"355": {"ChNPP":..., "SUNPP":..., "KhNPP":..., "RNPP":..., "joint":..., "alarms":..., "znpp_loop":..., "quotes":[...]}, ...} for all 12.
