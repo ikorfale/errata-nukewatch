@@ -59,7 +59,11 @@ def skip_number(s, m):
 
 def drones(text):
     res, notes = {}, []
-    for sent in re.split(r"(?<=[.!?])\s+", text):
+    sents = re.split(r"(?<=[.!?])\s+", text)
+    # weekly 'drones reported near <site>' summaries outrank incident sentences
+    # ('the KhNPP reported two further drone attacks', u374 original)
+    sents = [x for x in sents if re.search(r"\bnear\b", x)] + [x for x in sents if not re.search(r"\bnear\b", x)]
+    for sent in sents:
         if "drone" not in sent.lower() or re.search(r"Spent Fuel", sent, re.I) and not site_spans(sent.split("Spent Fuel")[0]):
             continue
         used = set()

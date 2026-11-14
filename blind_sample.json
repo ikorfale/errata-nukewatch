@@ -1,0 +1,19 @@
+{
+ "seed": 20261114,
+ "pool": "150..368 minus 352,353 (fixtures 369-375 excluded)",
+ "sample": [
+  156,
+  166,
+  183,
+  211,
+  262,
+  273,
+  277,
+  279,
+  291,
+  300,
+  345,
+  350
+ ],
+ "rule": "coder (Fable 5.1, blind: sees only the update text, never parse.py output) codes drones near each site, alarms total, ZNPP off-site power loss count if stated; parser is not run on these 12 before coding is saved; parser fixes after the check go into fixtures, misses reported as found"
+}
