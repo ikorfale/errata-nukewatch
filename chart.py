@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Small multiples: drones reported in each NPP site's monitoring area per weekly IAEA update.
 Empty = the update gave no number for that site (drawn as a gap, never as zero)."""
-import csv, os, datetime as dt
+import csv, json, os, datetime as dt
 import matplotlib; matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -23,11 +23,14 @@ for ax, (c, name) in zip(axs, SITES):
     for s in ("top", "right"): ax.spines[s].set_visible(False)
     for s in ("left", "bottom"): ax.spines[s].set_color("#d0d7de")
     ax.tick_params(colors=MUTED, labelsize=8); ax.grid(axis="y", color="#eaeef2", lw=0.6); ax.set_axisbelow(True)
-    ax.set_xticks([dt.date(2026, m, 1) for m in (7, 8, 9, 10, 11)]); ax.set_xticklabels(["Jul", "Aug", "Sep", "Oct", "Nov"])
+    ms = [dt.date(y, m, 1) for y in (2026, 2027) for m in range(1, 13) if d[0] <= dt.date(y, m, 1) <= d[-1]]
+    ax.set_xticks(ms); ax.set_xticklabels([x.strftime("%b") for x in ms])
 axs[0].set_ylabel("drones reported per weekly update", fontsize=9, color=MUTED)
-fig.suptitle("Drones reported near Ukraine's nuclear sites, per weekly IAEA update (Jun 26 - Nov 14, 2026)",
+PO = set(json.load(open(os.path.join(HERE, "data", "parser_only.json")))) if os.path.exists(os.path.join(HERE, "data", "parser_only.json")) else set()
+U0, U1 = rows[0]["update"], rows[-1]["update"]
+fig.suptitle(f"Drones reported near Ukraine's nuclear sites, per weekly IAEA update ({d[0]:%b %-d, %Y} - {d[-1]:%b %-d, %Y})",
              x=0.01, ha="left", fontsize=11.5, color=INK)
-fig.text(0.01, 0.01, "Source: IAEA Updates 355-375, coded blind by two models, reconciled by quote. Tick on the baseline = no number given that week (not zero). "
+fig.text(0.01, 0.01, f"Source: IAEA Updates {U0}-{U1}; " + ("355-375 coded blind by two models, reconciled by quote; later weeks read by the parser only. " if PO else "coded blind by two models, reconciled by quote. ") + "Tick on the baseline = no number given that week (not zero). "
          "Counting era starts June 2026; earlier updates describe episodes only. errata.page", fontsize=7, color=MUTED)
 fig.tight_layout(rect=(0, 0.04, 1, 0.94))
 out = os.path.join(HERE, "data", "nukewatch-weekly.png"); fig.savefig(out); print(out)

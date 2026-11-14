@@ -48,7 +48,12 @@ def build_index():
         key = (clean, p[1])
         if n not in best or key > best[n][2]:
             best[n] = (u, p[1], key)
-    json.dump({str(n): best[n][:2] for n in sorted(best)}, open(os.path.join(D, "wayback_index.json"), "w"))
+    out = {str(n): list(best[n][:2]) for n in sorted(best)}
+    ip = os.path.join(D, "wayback_index.json")
+    if os.path.exists(ip):  # keep updates found earlier that this CDX answer left out (u375, 14 Nov)
+        for n, v in json.load(open(ip)).items():
+            out.setdefault(n, v)
+    json.dump(dict(sorted(out.items(), key=lambda kv: int(kv[0]))), open(ip, "w"))
     return best
 
 
