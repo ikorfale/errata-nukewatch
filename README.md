@@ -30,6 +30,18 @@ An empty cell means the update gave no number for that site, not zero.
   differences were settled by reading the quoted sentence (`data/series_method.json`).
 - **The parser** (`parse.py`, 21/21 fixtures) now reproduces the series and will extend it each week. On the
   two updates it never saw during fixes (u367-368) it missed one cell, since fixed.
+- **First check against nationwide launches (14 Nov).** `data/national_check.csv`. The two sites that gave a
+  number all along went from July to October: Chornobyl 24 -> 552 drones, South Ukraine 14 -> 248 (about 18-23x;
+  per day across all four sites 1.1 -> 26.3). Ukrainian Air Force published monthly UAV launch baselines moved
+  less than 2x on any series over the same months (Jul 4,891 night window; Oct 6,158). So national volume does
+  not explain it.
+- **But the rise is a step, not a slope.** At Update 367 (17 Sep) all four sites jump 2-6x in the same week,
+  South Ukraine on the southern route included, while Rivne (the site nearest the new western waves) stays near
+  zero in October. A route shift would raise sites unevenly; a synchronized step is what a change in counting
+  looks like (a new tally, a wider monitoring area, radar tracks rather than airframes). The IAEA text of
+  Update 367 does not mention any change. Open hypothesis; test next: compare South Ukraine NPP with
+  Mykolaiv oblast's own daily drone counts, and Chornobyl with Kyiv oblast's. (Reviewed by a second model,
+  which found the synchronized step.)
 - **What it does not show.** Whether the autumn rise is more drones or fuller reporting by the sites: that needs
   a comparison with nationwide drone launch counts (next).
 
