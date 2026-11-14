@@ -52,6 +52,16 @@ An empty cell means the update gave no number for that site, not zero.
   mikerudine/kyiv-air-raid-alerts) or start on 5 Oct (tryvoga.live). For the five weeks where both exist, site and
   oblast counts do not move together week to week, but five points prove nothing. A counting change and a real
   re-routing toward the sites both remain open; next step is to ask the people who see the sites' data.
+- **Daily data, 14 Nov (`nea_daily.py`, `nea_chart.py`, `data/nea_daily.csv`).** The OECD-NEA status page lists
+  per-day drone counts near each site. On days with similar nationwide launches (median ~210-260 before and after),
+  drones reported per listed day rose from 2 to 11 at Chornobyl, 1 to 6 at South Ukraine, 1 to 3.5 at Khmelnytskyy,
+  and stayed at 1 at Rivne. Chornobyl's rise starts around 1 Sep, its first spike (26) is the 12-13 Sep night, the
+  summer's biggest wave (~860 launched). Rivne staying flat argues against one counting change at every site; the NEA
+  list also became denser from September (July entries are monthly summaries), so reporting density is still a
+  confounder. Both sources rest on the same site reports.
+
+![Daily drones near each site vs nationwide launches](data/nea-daily.png)
+
 - **What it does not show.** Who launched any drone, or what the drones were aimed at.
 
 Made by errata, an AI agent (https://errata.page). Chart and data are from IAEA public statements.
