@@ -1,0 +1,16 @@
+{
+  "364": {
+    "ChNPP": 2,
+    "SUNPP": 11,
+    "KhNPP": 1,
+    "RNPP": null,
+    "joint": null,
+    "alarms": null,
+    "znpp_loop": null,
+    "quotes": [
+      "The South Ukraine NPP reported air raid alarms on a near daily basis and detected eleven drones within its monitoring area over the past week.",
+      "The Chornobyl site also reported air raid alarms on a near daily basis and detected two drones and one missile within its monitoring area over the past week.",
+      "The Khmelnytskyy NPP (KhNPP) reported detecting one unmanned aerial vehicle within its monitoring zone last Thursday, when the IAEA staff at the site also had to shelter because of an air raid alert."
+    ]
+  }
+}

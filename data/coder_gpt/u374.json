@@ -1,0 +1,17 @@
+{
+  "374": {
+    "ChNPP": 43,
+    "SUNPP": 36,
+    "KhNPP": 22,
+    "RNPP": null,
+    "joint": null,
+    "alarms": 123,
+    "znpp_loop": null,
+    "quotes": [
+      "Over the past week, a total of 123 air raid alerts were reported across the KhNPP, RNPP, South Ukraine Nuclear Power Plant (SUNPP) and Chornobyl Nuclear Power Plant (ChNPP) sites, with the IAEA team at the RNPP having to shelter.",
+      "Drones were also reported near three of these sites: 18 near the KhNPP, 36 near the SUNPP and 43 near the ChNPP.",
+      "The plant reported that two Shahed-type drones had targeted an electrical substation supplying Netishyn that day.",
+      "On 3 November, the KhNPP reported two further drone attacks affecting residential areas of Netishyn the previous night."
+    ]
+  }
+}

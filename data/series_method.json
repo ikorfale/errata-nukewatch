@@ -1,0 +1,4 @@
+{
+ "method": "two blind coders (Claude Fable 5.1, GPT-5), same prompt, text only; agreed 61/65 non-empty cells; 4 disagreements resolved by reading the quoted sentence: 362 loop format only; 361 loop 24 ('bringing the total number of such events ... to 24'); 371 ChNPP 134 (weekly count; GPT added one separately observed drone); 374 KhNPP 18 (weekly total; GPT added two separate attacks). Empty = no number stated for that site, not zero.",
+ "parser_heldout": "u367-368 (not seen during fixes): 1 miss of the non-empty cells (368 RNPP: 'The Rivne NPP and the Khmelnytskyy NPP each reported one drone')"
+}

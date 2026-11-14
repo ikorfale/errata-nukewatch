@@ -97,6 +97,13 @@ def drones(text):
                     res[code] = res.get(code, 0) + val(m.group(1))
                     used.add(m.group(0) + "@" + code)
                 sent = sent.replace(c, "")
+        # 'A and B each reported N drones': N for every site named before 'each'
+        me = re.search(r"\beach (?:reported|detected)(?: detecting)? " + NUM + r"\s+drones?", sent, re.I)
+        if me:
+            for _, _, code in site_spans(sent[:me.start()]):
+                if code != "ZNPP" and code not in res:
+                    res[code] = val(me.group(1))
+            sent = sent[:me.start()]
         # drop the spent-fuel clause
         sent = re.sub(r"[^,.;]*Spent Fuel[^,.;]*", "", sent, flags=re.I)
         sent = re.sub(r"(as well as|and) another\b", r"\1 one", sent)
