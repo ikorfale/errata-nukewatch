@@ -15,5 +15,10 @@
   345,
   350
  ],
- "rule": "coder (Fable 5.1, blind: sees only the update text, never parse.py output) codes drones near each site, alarms total, ZNPP off-site power loss count if stated; parser is not run on these 12 before coding is saved; parser fixes after the check go into fixtures, misses reported as found"
+ "rule": "coder (Fable 5.1, blind: sees only the update text, never parse.py output) codes drones near each site, alarms total, ZNPP off-site power loss count if stated; parser is not run on these 12 before coding is saved; parser fixes after the check go into fixtures, misses reported as found",
+ "amendment_2026-11-14": {
+  "result_r1": "9 of 12 coded (300,345,350 not yet fetched). Coder and parser agree 9/9, but every value is null on both sides: zero power. The pool 150..368 predates systematic weekly per-site drone totals; 2025 texts give only sporadic incident counts ('five drones were detected 2 km west of the site on 11-12 April', u286).",
+  "redraw_rule": "After the full fetch: era start = first update whose text matches a weekly per-site total sentence by grep (r'Drones were (?:also )?reported near' or a number directly before 'near the (KhNPP|RNPP|SUNPP|ChNPP)'), found without the parser. Draw 12 with seed 20261115 from era start..368 (fixtures excluded); if fewer than 12, take all. Same blind coder and prompt. Incident counts become a second, separate column and get their own check.",
+  "not_changed": "parser untouched between coding and comparison"
+ }
 }

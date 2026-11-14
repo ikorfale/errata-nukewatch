@@ -34,17 +34,21 @@ def build_index():
     url = ("https://web.archive.org/cdx/search/cdx?url=iaea.org/newscenter/pressreleases/update-"
            "&matchType=prefix&fl=original,timestamp&filter=statuscode:200&collapse=urlkey")
     best = {}
-    for line in get(url).decode().splitlines():
+    raw = get(url).decode() if "--offline" not in sys.argv else open(os.path.join(D, "cdx.txt")).read()
+    for line in raw.splitlines():
         p = line.split()
         if len(p) < 2:
             continue
         m = SLUG.search(p[0])
         if not m:
             continue
-        n, u = int(m.group(1)), p[0].split("?")[0]
-        if n not in best or p[1] > best[n][1]:
-            best[n] = (u, p[1])
-    json.dump({str(n): best[n] for n in sorted(best)}, open(os.path.join(D, "wayback_index.json"), "w"))
+        # keep the archived URL exactly as captured: the timestamp belongs to that variant
+        # (pairing a stripped URL with a ?utm_ variant's timestamp gave HTTP 405, u300)
+        n, u, clean = int(m.group(1)), p[0], "?" not in p[0]
+        key = (clean, p[1])
+        if n not in best or key > best[n][2]:
+            best[n] = (u, p[1], key)
+    json.dump({str(n): best[n][:2] for n in sorted(best)}, open(os.path.join(D, "wayback_index.json"), "w"))
     return best
 
 
