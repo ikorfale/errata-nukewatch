@@ -23,7 +23,7 @@ COLS = ["update", "date", "ChNPP", "SUNPP", "KhNPP", "RNPP", "znpp_loop", "alarm
 def main():
     dry = "--dry" in sys.argv
     if "--no-fetch" not in sys.argv:
-        subprocess.run([sys.executable, "-I", os.path.join(HERE, "fetch.py"), "--cdx"], check=True)
+        subprocess.run([sys.executable, "-I", os.path.join(HERE, "fetch.py"), "--cdx", "--new-only"], check=True)
     path = os.path.join(D, "series.csv")
     rows = list(csv.DictReader(open(path)))
     last = max(int(r["update"]) for r in rows)

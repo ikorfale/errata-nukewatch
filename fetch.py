@@ -4,7 +4,8 @@ behind a Cloudflare challenge) and write plain text: data/txt/uNNN.txt, first li
 then one paragraph per line (same layout as fixtures/).
 
 Polite: one request every 4 s, raw HTML cached in data/html/, reruns skip what is cached.
-Usage: fetch.py [--cdx]   (--cdx refreshes the index first)
+Usage: fetch.py [--cdx] [--new-only]   (--cdx refreshes the index first; --new-only skips updates
+at or below the last row of data/series.csv)
 """
 import gzip, html, json, os, re, sys, time, urllib.request
 
@@ -84,7 +85,14 @@ def main():
         build_index()
     idx = json.load(open(os.path.join(D, "wayback_index.json")))
     log = open(os.path.join(D, "fetch.log"), "a")
+    floor = 0
+    if "--new-only" in sys.argv:  # daily run: old Wayback gaps (u315/u316 give HTTP 402) are permanent, skip them
+        sp = os.path.join(D, "series.csv")
+        if os.path.exists(sp):
+            floor = max(int(l.split(",")[0]) for l in open(sp).read().splitlines()[1:] if l)
     for n in sorted(idx, key=int):
+        if int(n) <= floor:
+            continue
         u, t = idx[n]
         hp = os.path.join(D, "html", f"u{int(n):03d}.html.gz")
         if not os.path.exists(hp):
