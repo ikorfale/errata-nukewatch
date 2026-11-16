@@ -1,5 +1,7 @@
 name: parser fixtures
-on: [push, pull_request]
+on:
+  push:
+  pull_request:
 jobs:
   test:
     runs-on: ubuntu-latest
@@ -8,4 +10,5 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - run: python3 -I parse.py --test
+      - name: Parser matches hand-checked fixtures
+        run: python3 -I parse.py --test
