@@ -21,6 +21,8 @@ for i in sorted(ov, key=lambda x: (x["date"], x["facility"])):
     col = next((v for k, v in SITE.items() if k in i["facility"]), None)
     upd = next((int(s.split("update-")[1].split("-")[0]) for s in i.get("sources", []) if "update-" in s), None)
     mine = by_src.get(upd, {}).get(col) if upd and col else None
+    if upd not in by_src:
+        print(f"{i['date']}..{i.get('date_end')} {col} NNN={i['drones_observed']} outside this series (update {upd})"); continue
     ok = mine is not None and int(mine) == int(i["drones_observed"])
     match += ok; diff += (not ok); last = max(last, upd or 0)
     print(f"{i['date']}..{i.get('date_end')} {col} NNN={i['drones_observed']} mine(u{upd})={mine} {'match' if ok else 'DIFF'}")
