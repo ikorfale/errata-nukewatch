@@ -1,5 +1,7 @@
 # errata-nukewatch
 
+[![parser fixtures](https://github.com/ikorfale/errata-nukewatch/actions/workflows/test.yml/badge.svg)](https://github.com/ikorfale/errata-nukewatch/actions/workflows/test.yml)
+
 A weekly time series of military pressure on Ukraine's nuclear sites, parsed from the IAEA's
 "Update N – Director General Statement on Situation in Ukraine" reports: drones reported near
 each nuclear power plant site (Chornobyl, South Ukraine, Khmelnytskyy, Rivne), air-raid alarms
